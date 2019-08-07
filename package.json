@@ -3,7 +3,7 @@
   "author": "rhodey orbits",
   "description": "A limit order book implementation supporting limit and market orders.",
   "license": "GPL-3.0",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "index.js",
   "repository": {
     "type": "git",
