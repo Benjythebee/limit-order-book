@@ -9,8 +9,11 @@
     "type": "git",
     "url": "https://github.com/rhodey/limit-order-book"
   },
-  "keywords" : [
-    "limit", "market", "trading", "hft"
+  "keywords": [
+    "limit",
+    "market",
+    "trading",
+    "hft"
   ],
   "scripts": {
     "test": "tape test/*.js"

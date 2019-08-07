@@ -1,17 +1,47 @@
 # limit-order-book
-
 A JavaScript limit order book implementation supporting limit and market orders.
 
-## Install
+## Usage
+```javascript
+var LimitOrder = require('limit-order-book').LimitOrder
+var LimitOrderBook = require('limit-order-book').LimitOrderBook
+
+let order1 = new LimitOrder("order01", "bid", 13.37, 10)
+let order2 = new LimitOrder("order02", "ask", 13.38, 10)
+let order3 = new LimitOrder("order03", "bid", 13.38, 5)
+
+let book = new LimitOrderBook()
+
+let result = book.add(order1)
+result = book.add(order2)
+result = book.add(order3)
+
+console.log(result)
 ```
-$ npm install limit-order-book
+```
+TakeResult {
+  taker:
+   LimitOrder {
+     orderId: 'order03',
+     side: 'bid',
+     price: 13.38,
+     size: 5,
+     sizeRemaining: 0,
+     valueRemoved: 0 },
+  makers:
+   [ LimitOrder {
+       orderId: 'order02',
+       side: 'ask',
+       price: 13.38,
+       size: 10,
+       sizeRemaining: 5,
+       valueRemoved: 66.9 } ],
+  takeSize: 5,
+  takeValue: 66.9 }
 ```
 
 ## Testing
 ```
-$ git clone https://github.com/rhodey/limit-order-book
-$ cd limit-order-book
-$ npm install
 $ npm run test
 ```
 
