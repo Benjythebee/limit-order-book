@@ -27,7 +27,9 @@ TakeResult {
      price: 13.38,
      size: 5,
      sizeRemaining: 0,
-     valueRemoved: 0 },
+     valueRemoved: 0,
+     volumeRemoved:0
+     },
   makers:
    [ LimitOrder {
        orderId: 'order02',
@@ -35,10 +37,14 @@ TakeResult {
        price: 13.38,
        size: 10,
        sizeRemaining: 5,
-       valueRemoved: 66.9 } ],
+       valueRemoved: 66.9,
+       volumeRemoved: 5} ],
   takeSize: 5,
   takeValue: 66.9 }
 ```
+
+## Edited
+to add `volumeRemoved` in limit Orders so that when you have multiple limit Orders is makers you can easily manage the accounting.
 
 ## Testing
 ```
